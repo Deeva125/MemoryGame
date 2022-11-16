@@ -275,15 +275,38 @@
     let previousCardID=-1
     let cardsFlipped=0
     
+    function wrongGuess(){
+      console.log(previousSelected)
+      console.log(currentSelected)
+      for (let i = 0; i < cards.length; i++) {
+        if(previousSelected!=currentSelected){
+          document.getElementById(cards[i]["id"]).src = "backCard.png";
+        }
+        }
+    }
+
     function flipCard(cardID) {
+      for (let i = 0; i < cards.length; i++) {
+        if (cardID == cards[i]["id"]) {
+          cardValue=cards[i]["value"]
+        }
+      }
+      cardsFlipped=cardsFlipped+1
       for (let i = 0; i < cards.length; i++) {
         if (cardID == cards[i]["id"]) {
           document.getElementById(cardID).src = "Cards/" + cards[i]["value"];
         }
       }
-      // setTimeout(() => {
-      //   select(cardID);
-      // }, 1000);
+
+      if(cardsFlipped%2==0){
+        currentSelected=cardValue
+        setTimeout(() => {
+          wrongGuess()
+        }, 1000);
+      }
+      else{
+        previousSelected=cardValue
+      }
     }
 
     function start() {
