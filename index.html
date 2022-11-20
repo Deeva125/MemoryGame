@@ -42,6 +42,48 @@
           <div class="col-xl-2 col-4 bg-secondary p-1">
             <img id="img4" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
           </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img5" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img6" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img7" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img8" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img9" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img10" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img11" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img12" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img13" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img14" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img15" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img16" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img17" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
+          <div class="col-xl-2 col-4 bg-secondary p-1">
+            <img id="img18" class="w-100 rounded" onclick="flipCard(this.id)" src="backCard.png" alt="" />
+          </div>
         </div>
 
       </div>
@@ -117,8 +159,106 @@
       value: "2_of_diamonds.png",
     };
 
+    card5 = {
+      id: "img5",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "2_of_hearts.png",
+    };
+
+    card6 = {
+      id: "img6",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "2_of_hearts.png",
+    };
+
+    card7 = {
+      id: "img7",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "2_of_spades.png",
+    };
+
+    card8 = {
+      id: "img8",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "2_of_spades.png",
+    };
+
+    card9 = {
+      id: "img9",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "3_of_clubs.png",
+    };
+
+    card10 = {
+      id: "img10",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "3_of_clubs.png",
+    };
+
+    card11 = {
+      id: "img11",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "3_of_diamonds.png",
+    };
+
+    card12 = {
+      id: "img12",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "3_of_diamonds.png",
+    };
+
+    card13 = {
+      id: "img13",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "3_of_hearts.png",
+    };
+
+    card14 = {
+      id: "img14",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "3_of_hearts.png",
+    };
+
+    card15 = {
+      id: "img15",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "3_of_spades.png",
+    };
+
+    card16 = {
+      id: "img16",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "3_of_spades.png",
+    };
+
+    card17 = {
+      id: "img17",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "4_of_clubs.png",
+    };
+
+    card18 = {
+      id: "img18",
+      side: "back",
+      back: "backCard.png", selected: false,
+      value: "4_of_clubs.png",
+    };
+
     // cards array
-    cards = [card1, card2, card3, card4];
+    cards = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14, card15, card16, card17, card18];
 
     // trackers
     let previousSelected = "none"
@@ -180,7 +320,6 @@
         }
       }
 
-    }
 
     function flipSelectedCardToFront(cardId) {
       for (let i = 0; i < cards.length; i++) {
@@ -204,9 +343,13 @@
 
     function start() {
       flipAllCardToFront()
+      totalGuesses=0
+      wrongGuesses=0
+      rightGuesses=0
+      updateScore()
       setTimeout(() => {
         flipAllCardToBack()
-      }, 1000);
+      }, 3000);
     }
   </script>
 </body>
