@@ -167,12 +167,19 @@
       }
     }
 
-    function flipSelectedCardToBack(cardId) {
+
+      for (let i = 0; i < cards.length; i++) {
+        if (cardID == cards[i]["id"]) {
+          cardValue=cards[i]["value"]
+        }
+      }
+      cardsFlipped=cardsFlipped+1
       for (let i = 0; i < cards.length; i++) {
         if (cardID == cards[i]["id"]) {
           document.getElementById(cardID).src = "Cards/" + cards[i]["value"];
         }
       }
+
     }
 
     function flipSelectedCardToFront(cardId) {
