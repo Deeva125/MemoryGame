@@ -341,6 +341,16 @@
       }
     }
 
+    function shuffleCards() {
+        randomNumber = Math.random();
+        console.log(randomNumber);
+        if (randomNumber > 0.5) {
+          cardsValues = ["2_of_diamonds.png", "2_of_clubs.png"];
+        } else {
+          cardsValues = ["2_of_clubs.png", "2_of_diamonds.png"];
+        }
+      }
+
     function start() {
       flipAllCardToFront()
       totalGuesses=0
