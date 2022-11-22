@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bootstrap demo</title>
+  <title>Memory Game</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 </head>
@@ -345,14 +345,15 @@
         randomNumber = Math.random();
         console.log(randomNumber);
         if (randomNumber > 0.5) {
-          cardsValues = ["2_of_diamonds.png", "2_of_clubs.png"];
+          cards = [card1, card5, card11, card4, card15, card9, card3, card14, card7, card13, card10, card12, card18, card2, card16, card6, card17, card8];
         } else {
-          cardsValues = ["2_of_clubs.png", "2_of_diamonds.png"];
+          cards = [card11, card4, card5, card1, card15, card3, card14, card9, card10, card13, card7, card12, card16, card6, card2, card17, card8, card18];
         }
       }
 
     function start() {
       flipAllCardToFront()
+      shuffleCards()
       totalGuesses=0
       wrongGuesses=0
       rightGuesses=0
