@@ -259,8 +259,13 @@
 
     // cards array
     cards = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14, card15, card16, card17, card18];
-
+    cardValues=["2_of_clubs.png","2_of_diamonds.png","2_of_hearts.png","2_of_spades.png","3_of_clubs.png","3_of_diamonds.png","3_of_hearts.png","3_of_spades.png","4_of_clubs.png","2_of_clubs.png","2_of_diamonds.png","2_of_hearts.png","2_of_spades.png","3_of_clubs.png","3_of_diamonds.png","3_of_hearts.png","3_of_spades.png","4_of_clubs.png"]
     // trackers
+    let temp=[]
+    for (let i=0;i<cardValues.length;i++){
+      temp.push(cardValues[i])
+    }
+
     let previousSelected = "none"
     let currentSelected = "none"
     let cardsFlipped = 0
@@ -342,7 +347,17 @@
     }
 
     function shuffleCards() {
-        randomNumber = Math.random();
+      console.log(temp)
+      console.log(cardValues)
+      card1["value"]= "2_of_diamonds.png"
+      for(let i=0; i<cards.length; i++){
+        cards[i]["value"]=cardValues.pop()
+      }
+      for (let i=0;i<temp.length;i++){
+      cardValues.push(temp[i])
+    }
+
+      randomNumber = Math.random();
         console.log(randomNumber);
         if (randomNumber > 0.5) {
           cards = [card1, card5, card11, card4, card15, card9, card3, card14, card7, card13, card10, card12, card18, card2, card16, card6, card17, card8];
@@ -352,8 +367,8 @@
       }
 
     function start() {
-      flipAllCardToFront()
       shuffleCards()
+      flipAllCardToFront()
       totalGuesses=0
       wrongGuesses=0
       rightGuesses=0
